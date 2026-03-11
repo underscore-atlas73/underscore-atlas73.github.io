@@ -25,4 +25,4 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-document.addEventListener('DOMContentLoaded', teletype);
+teletype();
