@@ -18,8 +18,6 @@
     visibility: hidden;
 
     white-space: normal;
-
-    max-width: calc(20% - 10px);
 }
 
 a.blogItem {
