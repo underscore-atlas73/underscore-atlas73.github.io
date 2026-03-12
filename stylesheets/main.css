@@ -31,11 +31,11 @@ a {
 
 @font-face {
     font-family: 'CommodoreSystem';
-    src:url('../fonts/C64_Pro_Mono-STYLE.woff') format('woff'),
-    url("../fonts/C64_Pro_Mono-STYLE.woff2") format("woff2"),
-    url("../fonts/C64_Pro_Mono-STYLE.ttf") format("truetype");
-    url('fonts/C64_Pro_Mono-STYLE.eot') format("embedded-opentype"),
-    url('fonts/C64_Pro_Mono-STYLE.otf') format('opentype');
+    src:url('/fonts/C64_Pro_Mono-STYLE.woff') format('woff'),
+    url("/fonts/C64_Pro_Mono-STYLE.woff2") format("woff2"),
+    url("/fonts/C64_Pro_Mono-STYLE.ttf") format("truetype");
+    url('/fonts/C64_Pro_Mono-STYLE.eot') format("embedded-opentype"),
+    url('/fonts/C64_Pro_Mono-STYLE.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }

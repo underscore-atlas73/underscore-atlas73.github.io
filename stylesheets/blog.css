@@ -1,0 +1,37 @@
+.blogsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    /*border: 2px solid #ccc;*/
+    padding: 10px;
+}
+
+.blogItem {
+    flex-basis: calc(20% - 10px);
+    aspect-ratio: 1 / 1;
+
+    background-color: black;
+    padding: 20px 20px;
+    border: 2px solid #eeeeee;
+
+    visibility: hidden;
+
+    white-space: normal;
+}
+
+a.blogItem {
+    padding: 0;
+}
+
+.blogItemText {
+    white-space: preserve;
+    overflow-wrap: break-word;
+    font-size: 16px;
+}
+
+.blogItem:hover {
+    background-color: #eeeeee;
+    cursor: pointer;
+    color: black;
+}

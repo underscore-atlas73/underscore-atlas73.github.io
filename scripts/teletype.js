@@ -1,22 +1,64 @@
-const teletypeSpeed = 16;
+teletypeSpeed = 16;
 async function teletype() {
     const elements = document.getElementsByClassName("mainTeletype");
     for (const element of elements) {
+        let teleTypeSpeedInternal = teletypeSpeed;
+        if (element.hasAttribute("speed-override")) {
+            teleTypeSpeedInternal = element.getAttribute("speed-override");
+        }
+
         let text = element.getAttribute("text");
-        for (let i = 0; i < text.length; i++) {
-            await sleep(teletypeSpeed);
-            if ("\\SPEC" == text.substring(i, i+5)) {
-                i += 5;
-                let spec = element.getAttribute("SPEC" + text[i]);
-                element.innerHTML += spec;
-                continue;
+        
+        if (element.classList.contains("blogItem")) {
+            await sleep(teleTypeSpeedInternal);
+            element.style.visibility = "visible";
+            continue;
+        }
+
+        if (teleTypeSpeedInternal != 0) {
+            for (let i = 0; i < text.length; i++) {
+                await sleep(teleTypeSpeedInternal);
+
+                if ("\\SPEC" == text.substring(i, i + 5)) {
+                    i += 5;
+                    let spec = element.getAttribute("SPEC" + text[i]);
+                    element.innerHTML += spec;
+                    continue;
+                }
+                if ('\\' === text[i] && 'n' === text[i + 1]) {
+                    element.innerHTML += "<br>";
+                    i += 1;
+                    continue;
+                }
+                if ('\\' === text[i] && 't' === text[i + 1]) {
+                    element.innerHTML += '\t';
+                    i += 1;
+                    continue;
+                }
+
+                element.innerText += text[i];
             }
-            if ('\\' === text[i] && 'n' === text[i + 1]) {
-                element.innerHTML += "<br>";
-                i += 1;
-                continue;
+        } else {
+            for (let i = 0; i < text.length; i++) {
+                if ("\\SPEC" == text.substring(i, i + 5)) {
+                    i += 5;
+                    let spec = element.getAttribute("SPEC" + text[i]);
+                    element.innerHTML += spec;
+                    continue;
+                }
+                if ('\\' === text[i] && 'n' === text[i + 1]) {
+                    element.innerHTML += "<br>";
+                    i += 1;
+                    continue;
+                }
+                if ('\\' === text[i] && 't' === text[i + 1]) {
+                    element.innerHTML += '\t';
+                    i += 1;
+                    continue;
+                }
+
+                element.innerText += text[i];
             }
-            element.innerText += text[i];
         }
     }
 }
