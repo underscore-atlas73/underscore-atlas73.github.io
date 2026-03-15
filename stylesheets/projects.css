@@ -1,4 +1,4 @@
-.blogsContainer {
+.projects-container {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -7,12 +7,13 @@
     /*border: 2px solid #ccc;*/
     padding-top: 10px;
 
-    justify-content: left;
+    justify-content: center;
 }
 
-.blogItem {
-    flex-basis: 320px;
-    aspect-ratio: 1 / 1;
+.projectListing {
+    /*flex-basis: calc(20% - 10px);*/
+    flex-basis: 100%;
+    min-height: 160px;
 
     background-color: black;
     padding: 20px 20px;
@@ -23,23 +24,23 @@
     white-space: normal;
 }
 
-a.blogItem {
+a.projectListing {
     padding: 0;
 }
 
-.blogItemText {
+.projectListingText {
     white-space: preserve;
     overflow-wrap: break-word;
     font-size: 16px;
 }
 
-.blogItem:hover {
+.projectListing:hover {
     background-color: #eeeeee;
     cursor: pointer;
     color: black;
 }
 
-.blogItemDate {
+.projectListingDate {
     font-size: 8px;
     display: block;
     margin-bottom: 10px;

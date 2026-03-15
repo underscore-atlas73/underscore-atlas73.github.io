@@ -1,3 +1,7 @@
+pre {
+    cursor: default;
+}
+
 body {
     background-color: black;
 }

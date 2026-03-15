@@ -9,7 +9,7 @@ async function teletype() {
 
         let text = element.getAttribute("text");
         
-        if (element.classList.contains("blogItem")) {
+        if (element.classList.contains("blogItem") || element.classList.contains("projectListing")) {
             await sleep(teleTypeSpeedInternal);
             element.style.visibility = "visible";
             continue;
