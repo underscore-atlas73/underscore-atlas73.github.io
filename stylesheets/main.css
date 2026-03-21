@@ -27,6 +27,10 @@ a {
     background-color: #eeeeee;
     color: black;
 }
+.menuItem {
+    width: 100%;
+    cursor: pointer;
+}
 
 /*@keyframes typing {*/
 /*    from { width: 0 }*/
@@ -42,4 +46,11 @@ a {
     url('/fonts/C64_Pro_Mono-STYLE.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
+}
+
+.h_line {
+    height: 0;
+    width: 100%;
+    border-bottom: 2px solid #eeeeee;
+    border-left-width: 0px;
 }

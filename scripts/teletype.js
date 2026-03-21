@@ -7,10 +7,19 @@ async function teletype() {
             teleTypeSpeedInternal = element.getAttribute("speed-override");
         }
 
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has("quick")) {
+            teleTypeSpeedInternal = 0;
+        }
+
         let text = element.getAttribute("text");
-        
-        if (element.classList.contains("blogItem") || element.classList.contains("projectListing")) {
+
+        if ((element.classList.contains("nontextTeletype")) && teleTypeSpeedInternal !== 0) {
             await sleep(teleTypeSpeedInternal);
+            element.style.visibility = "visible";
+            continue;
+        }
+        if (element.classList.contains("nontextTeletype") || element.classList.contains("projectListing")) {
             element.style.visibility = "visible";
             continue;
         }
