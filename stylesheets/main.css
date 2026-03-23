@@ -47,10 +47,3 @@ a {
     font-weight: normal;
     font-style: normal;
 }
-
-.h_line {
-    height: 0;
-    width: 100%;
-    border-bottom: 2px solid #eeeeee;
-    border-left-width: 0px;
-}

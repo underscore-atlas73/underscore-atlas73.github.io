@@ -47,3 +47,10 @@ a.projectListing {
     display: block;
     margin-bottom: 10px;
 }
+
+.projectSeparator {
+    width: 100%;
+    border-top: 2px solid #eeeeee;
+    border-bottom: 2px solid #eeeeee;
+    visibility: hidden;
+}
